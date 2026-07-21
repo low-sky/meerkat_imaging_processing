@@ -4,16 +4,17 @@
 
 import os
 import sys
+sys.path.append(os.path.expanduser("/idia/projects/llus/test/code/analysis_scripts/"))
 
 from astropy.io import fits
+import phangsPipeline
 
 # Use boolean flags to set the steps to be performed when the pipeline
 # is called. See descriptions below (but only edit here).
 
 # Locate the master key
-key_file = '/users/eros/code/meerkat_processing/llus_keys/master_key.txt'
-sys.path.append(os.path.expanduser("/users/eros/code/phangs_imaging_scripts/"))
-sys.path.append(os.path.expanduser("/users/eros/code/analysis_scripts/"))
+key_file = '/idia/projects/llus/test/code/meerkat_imaging_processing/llus_keys/master_key.txt'
+# sys.path.append(os.path.expanduser("/idia/projects/llus/test/code/phangs_imaging_scripts/"))
 chunksize = 10
 
 
