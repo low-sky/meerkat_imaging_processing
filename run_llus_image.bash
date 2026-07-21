@@ -13,7 +13,7 @@
 export code_dir='/users/eros/code/meerkat_processing/'
 export target='ngc4945'
 
-# Edit to do correct stage string
+# Stage string 
 # S = staging
 # I = imaging
 # A = assemble
@@ -22,11 +22,9 @@ export target='ngc4945'
 export stagestring='S'
 
 #### you shouldn't need to edit below this line
-srun bash
-ls -l /idia/software/containers/casa-modular-v6.6.4.sif
-module load casa/6.6.4
-
-pip install spectral-cube
+module load python/3.12.13
+source /idia/projects/llus/test/venv/pipeline/bin/activate
 
 if [ -z ${SLURM_ARRAY_TASK_ID+x} ]; then export SLURM_ARRAY_TASK_ID=-1; else echo "Job array ID is set to '$SLURM_ARRAY_TASK_ID'"; fi
 casapy ${code_dir}/run_llus_image.py $target $stagestring $SLURM_ARRAY_TASK_ID
+
