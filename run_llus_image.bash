@@ -13,7 +13,7 @@
 export code_dir='/users/eros/code/meerkat_processing/'
 export target='ngc4945'
 
-# Edit to do correct stage string
+# Stage string 
 # S = staging
 # I = imaging
 # A = assemble
