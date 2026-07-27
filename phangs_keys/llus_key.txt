@@ -210,18 +210,18 @@ singledish_root		    /idia/projects/llus/test/pipeline/singledish/
 
 # Data files
 
-ms_key			  ms_file_key.txt
+ms_key			  llus_ms_file_key.txt
 singledish_key		singledish_key.txt
 cleanmask_key		cleanmask_key.txt
 distance_key		distance_key.txt
 
 # Definitions and mapping
 
-config_key		config_definitions.txt
-target_key		target_definitions.txt
+config_key		llus_config_definitions.txt
+target_key		llus_targets.txt
 moment_key		moment_key.txt
 derived_key		derived_key.txt
 imaging_key		imaging_recipes.txt
 linmos_key		linearmosaic_definitions.txt
-override_key		overrides.txt
+override_key	overrides.txt
 dir_key			dir_key.txt

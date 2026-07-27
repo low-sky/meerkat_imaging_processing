@@ -13,7 +13,7 @@ import phangsPipeline
 # is called. See descriptions below (but only edit here).
 
 # Locate the master key
-key_file = '/idia/projects/llus/test/code/meerkat_imaging_processing/llus_keys/llus_key.txt'
+key_file = '/idia/projects/llus/test/code/meerkat_imaging_processing/phangs_keys/master_key.txt'
 # sys.path.append(os.path.expanduser("/idia/projects/llus/test/code/phangs_imaging_scripts/"))
 chunksize = 10
 
@@ -24,8 +24,6 @@ if len(sys.argv) != 4:
     raise ValueError('LLUS SLURM processing requires exactly 3 command line arguments: target, stagestring, job_array_id')
 
 target = sys.argv[-3]
-
-phangsPipeline.setup_logger(logfile=f'{target}_{os.environ['SLURM_JOB_ID']}.log')
 
 try: 
     chunk_num = int(sys.argv[-1])
@@ -280,6 +278,3 @@ if do_derived:
         this_der.loop_derive_products(do_convolve=False, do_noise=False,
                                     do_strictmask=False, do_broadmask=False,
                                     do_moments=False, do_secondary=True)
-
-        
-
