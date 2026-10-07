@@ -200,7 +200,10 @@ if do_imaging:
         raise ValueError(f"Chunk number {chunk_num} is greater than the number of chunks {this_imh.nchunks}")
 
     print(f"Chunk {chunk_num} of {this_imh.nchunks}")
-    this_imh.run_imaging(do_all=True, chunk_num=chunk_num)
+    this_imh.run_imaging(do_all=True, chunk_num=chunk_num, 
+                         singlescale_mask_absolute=True,
+                         singlescale_mask_high_snr=5,
+                         singlescale_mask_low_snr=3)
 
 if do_assemble:
     this_imh = ImagingChunkedHandler(target, 'meerkat', 'hi21cm', this_kh,
